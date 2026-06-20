@@ -92,7 +92,7 @@ application:
   name: immich
   pods:
     - name: app
-      image: "registry.nexlayer.io/user_01kece1xyh817dwff7wnarhkxd/immich:9ee7000-fix4"
+      image: "registry.nexlayer.io/user_01kece1xyh817dwff7wnarhkxd/immich:9ee7000-fix6"
       path: /
       servicePorts:
         - 3000
@@ -101,7 +101,6 @@ application:
         PORT: "3000"
         HOSTNAME: "0.0.0.0"
 ```
-
 <!-- nexlayer:end -->
 
 ## Nexlayer Deployment Plan
@@ -132,7 +131,7 @@ application:
 
 ## Nexlayer Configuration
 <!-- nexlayer:section agent-managed=nexlayer_config -->
-**Last deployed:** 2026-06-20T22:17:06Z  
+**Last deployed:** 2026-06-20T22:28:15Z  
 **Live URL:** https://relaxed-weasel-immich.cloud.nexlayer.ai  
 **Runtime:**  · **Port:** auto-detected  
 **Deploy branch:** nexlayer  
@@ -142,7 +141,7 @@ application:
   name: immich
   pods:
     - name: app
-      image: "registry.nexlayer.io/user_01kece1xyh817dwff7wnarhkxd/immich:9ee7000-fix4"
+      image: "registry.nexlayer.io/user_01kece1xyh817dwff7wnarhkxd/immich:9ee7000-fix6"
       path: /
       servicePorts:
         - 3000
@@ -158,5 +157,6 @@ application:
 | Date | Status | Notes |
 |------|--------|-------|
 | 2026-06-20T21:47:25Z | analyzed | initial repo analysis |
-| 2026-06-20T22:17:06Z | success | deployed https://relaxed-weasel-immich.cloud.nexlayer.ai |
+| 2026-06-20T22:28:15Z | success | deployed https://relaxed-weasel-immich.cloud.nexlayer.ai |
 <!-- nexlayer:end -->
+

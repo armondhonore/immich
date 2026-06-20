@@ -2,7 +2,7 @@ application:
   name: immich
   pods:
     - name: app
-      image: "registry.nexlayer.io/user_01kece1xyh817dwff7wnarhkxd/immich:9ee7000-fix4"
+      image: "registry.nexlayer.io/user_01kece1xyh817dwff7wnarhkxd/immich:9ee7000-fix6"
       path: /
       servicePorts:
         - 3000
