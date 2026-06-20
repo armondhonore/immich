@@ -1,45 +1,12 @@
 application:
   name: immich
   pods:
-    - name: server
-      image: ghcr.io/immich-app/immich-server:release
+    - name: app
+      image: "registry.nexlayer.io/user_01kece1xyh817dwff7wnarhkxd/immich:9ee7000-fix4"
       path: /
       servicePorts:
-        - 2283
+        - 3000
       vars:
-        DB_HOSTNAME: postgres.pod
-        DB_PORT: "5432"
-        DB_DATABASE_NAME: immich
-        DB_USERNAME: immich
-        DB_PASSWORD: immich
-        REDIS_HOSTNAME: redis.pod
-        UPLOAD_LOCATION: /usr/src/app/upload
-      volumes:
-        - name: upload
-          mountPath: /usr/src/app/upload
-          size: 20Gi
-    - name: machine-learning
-      image: ghcr.io/immich-app/immich-machine-learning:release
-      servicePorts:
-        - 3003
-      volumes:
-        - name: model-cache
-          mountPath: /cache
-          size: 10Gi
-    - name: postgres
-      image: tensorchord/pgvecto-rs:pg14-v0.2.0
-      servicePorts:
-        - 5432
-      vars:
-        POSTGRES_DB: immich
-        POSTGRES_USER: immich
-        POSTGRES_PASSWORD: immich
-        POSTGRES_INITDB_ARGS: "--data-checksums"
-      volumes:
-        - name: db
-          mountPath: /var/lib/postgresql
-          size: 10Gi
-    - name: redis
-      image: redis:6.2-alpine
-      servicePorts:
-        - 6379
+        NODE_ENV: "production"
+        PORT: "3000"
+        HOSTNAME: "0.0.0.0"
